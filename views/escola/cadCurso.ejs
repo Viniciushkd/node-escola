@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cadastro de Cursos</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="/javascripts/escola.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark justify-content-between">
+            <a class="navbar-brand" href="#"><h3><small><i class="fas fa-graduation-cap"></i> Sistema de Escola</small></h3></a>
+        <div class="form-inline">
+            <center><a href='/logout' class="btn btn-light text-right"><i class="fas fa-sign-out-alt"></i> Logout</a></center>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <header>
+            <p>
+                <h3>Bem-vindo,
+                    <small class="text-muted nome">
+                        <%- usuario.nome %>
+                    </small>
+                </h3>
+            </p>
+            <nav aria-label="breadcrumb" role="navigation">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/menu">Menu</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Cadastro de Usuário</li>
+                </ol>
+            </nav>
+            <h1 class="display-3">Cadastro de Curso</h1>
+            <p class="lead">Forneça os dados do curso para seu cadastro</p>
+        </header>
+        <div id="msg"></div>
+        <section>
+            <form action="/novoCurso" method="post">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="exampleFormControlInput1">Código:</label>
+                        <input type="text"  name="cursos[codigo]" class="form-control" style="width: 400px" id="codigo" placeholder="Código do Curso">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="exampleFormControlInput1">Descrição:</label>
+                        <input type="text"  name="cursos[descricao]" class="form-control" style="width: 400px" id="descricao" placeholder="Descrição do Curso">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="exampleFormControlInput1">CH:</label>
+                        <input type="text"  name="cursos[ch]" class="form-control" style="width: 400px" id="codigo" placeholder="CH do Curso">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="exampleFormControlInput1">Categoria:</label>
+                        <select name="cursos[categoria]" class="form-control" style="width: 400px">
+                            <option value=""> ------</option>
+                            <% categorias.forEach(function(categoria, index) { %>
+                                <option value="<%= categoria %>">
+                                    <%= categoria %>
+                                </option>
+                            <% }) %>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <button type="submit" class="btn  btn-dark" id="btnAdd">Adicionar</button>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>

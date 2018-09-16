@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Sistema de Escola - Menu de Opções</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="/javascripts/escola.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark justify-content-between">
+            <a class="navbar-brand" href="#"><h3><small><i class="fas fa-graduation-cap"></i> Sistema de Escola</small></h3></a>
+        <div class="form-inline">
+                <center><a href='/logout' class="btn btn-light text-right"><i class="fas fa-sign-out-alt"></i> Logout</a></center>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <p>
+                <h3>Bem-vindo,
+                    <small class="text-muted nome">
+                        <%- usuario.nome %>
+                    </small>
+                </h3>
+            </p>
+            <nav aria-label="breadcrumb" role="navigation">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">Menu</li>
+                </ol>
+            </nav>
+            <h1 class="display-3">Menu de Opções</h1>
+            <p class="lead">Escolha sua opção</p>
+        </header>
+
+        <button type="button" id="cadastroCurso" class="btn btn-outline-primary"><i class="far fa-folder-open"></i><br>Cadastro de Curso</button>
+        <button type="button" id="listaCursos" class="btn btn-outline-primary"><i class="far fa-list-alt"></i><br>Lista dos Cursos</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+.btn-outline-primary{
+  width: 170px;
+  height: 150px;
+}
+
+.far{
+  font-size: 60px;
+}
+
+.logout{
+  float: right !important;
+}
+
+.btn-style{
+  width: 160px;
+}
+
+.login{
+  padding-top: 130px;
+}
+
+.nome{
+  text-transform: capitalize;
+}
+
+.navbar-brand{
+  font-family: 'Raleway', sans-serif;
+}
+
+.form-style{
+  width: 400px;
+}

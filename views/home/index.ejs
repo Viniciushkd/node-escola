@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cadastro de Escola - Login</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="/javascripts/escola.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div align="center" class="login">
+            <header>
+                <h1 class="display-3"><i class="fas fa-graduation-cap"></i> Sistema de Escola</h1>
+                <h3><footer class="blockquote-footer">Entre com suas credenciais</footer></h3>
+            </header>
+            <div class="row">
+                <div class="col-md-2 offset-md-5">
+                    <section>
+                        <form action="/login" method="post" align="center">
+                            <div class="form-group">
+                            <input type="text" name="usuario[nome]" class="form-control" aria-describedby="usuarioHelper" placeholder="Usuário">
+                            </div>
+                            <div class="form-group">
+                            <input type="password" name="usuario[senha]" class="form-control" placeholder="Senha">
+                            </div>
+                            <button type="submit" class="btn btn-outline-dark btn-style">Login</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
